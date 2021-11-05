@@ -1,0 +1,18 @@
+<div class="promo-blocks">
+  {{#if restaurants.length }}
+    {{#each restaurants }}
+      {{> restaurantItem this }}
+    {{/each}}
+  {{else}}
+    <p>No restaurants left :(</p>
+  {{/if}}
+  <div class='promo-blocks__actions'>
+      <a href='/restaurants/create' class='anchor--button'>
+        Create a Restaurant! 
+      </a>
+      <a href='/' class='anchor--button'>
+        Go back to Index
+      </a>
+
+  </div>
+</div>

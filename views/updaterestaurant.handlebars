@@ -1,0 +1,21 @@
+<h1>Edit restaurant</h1>
+
+<form id="updateRestaurantForm">
+    <input type="hidden" name="restaurantId" value= "{{restaurant.0.id}}">
+    <div>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" id="name" value= "{{restaurant.0.name}}" required>
+    </div>
+    <div>
+        <label for="imagelink">Image Link</label><br>
+        <input type="text" name="imagelink" id="imagelink" value= "{{restaurant.0.imagelink}}" required>
+    </div>
+    <button type="submit" class= "button--anchor">
+      Submit Changes
+    </button>
+</form>
+
+<script>
+    const form = document.getElementById("updateRestaurantForm")
+    form.addEventListener("submit", updateRestaurant)
+</script>

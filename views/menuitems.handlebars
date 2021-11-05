@@ -1,0 +1,16 @@
+<div class="promo-blocks">
+  {{#if menuitems.length }}
+    Menu Items available: {{menuitems.length}}
+    {{#each menuitems }}
+        {{> menuItemsItem this}}
+    {{/each}}
+  {{else}}
+    <p>No menu items left :(</p>
+  {{/if}}
+  <div class='promo-blocks__actions'>
+      <a href='/menus/{{menuId}}/menuitems/create' class='anchor--button'>
+        
+        Create a Menu Item! 
+      </a>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+
+do you want to delete this restaurant?
+
+<div class='restaurant'>
+  <h3>{{restaurant.0.name}}</h3>
+  <img src='{{restaurant.0.imagelink}}' alt='{{restaurant.0.name}}' />
+  <div class='promo-blocks__actions'>
+    <button type="button" data-id='{{restaurant.0.id}}' onClick= 'deleteRestaurant(this);'>
+      Yes
+    </button>   
+    <a class='anchor--button' href='/restaurants' type='button'>
+      No
+    </a>
+  </div>
+</div>
+

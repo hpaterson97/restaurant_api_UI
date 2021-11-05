@@ -1,0 +1,19 @@
+<div class='restaurant'>
+  <h3>{{this.name}}</h3>
+  <img src='{{this.imagelink}}' alt='{{this.name}}' />
+  <div class='promo-blocks__actions'>
+    <a href='/restaurants/{{this.id}}/menus' class='anchor--button'>
+      View
+    </a>
+    <a
+      href='/restaurants/{{this.id}}/edit'
+      data-id='{{this.id}}'
+      class='anchor--button'
+    >
+      Edit
+    </a>
+    <a class='anchor--button' href='/restaurants/{{this.id}}/delete' type='button' data-id='{{this.id}}'>
+      Delete
+    </a>
+  </div>
+</div>
