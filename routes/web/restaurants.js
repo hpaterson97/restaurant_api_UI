@@ -55,7 +55,6 @@ Router
         try {
             const response = await fetch(`${url}/${req.params.restaurant_id}`);
             const restaurant = await response.json();
-            console.log(restaurant);
             res.render("updaterestaurant", {restaurant});
         } catch (error) {
             return next(error);

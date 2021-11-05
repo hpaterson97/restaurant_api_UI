@@ -63,4 +63,29 @@ async function updateMenu(event) {
     if (response.ok) {
         window.location = `/restaurants/${data.restId}/menus`
     }
+}
+async function updateMenuItem(event) {
+
+    const form = event.target;
+
+    const data = {
+        id: form.menuItemId.value,
+        name: form.name.value,
+        price: form.price.value,
+        menuId: form.menuId.value
+    };
+
+    const url = `http://localhost:3002/api/menus/${data.menuId}/menuitems/${data.id}`;
+
+    const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body:  JSON.stringify(data),
+    });
+    
+    if (response.ok) {
+        window.location = `/menus/${data.menuId}/menuitems`
+    }
 };

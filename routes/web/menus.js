@@ -100,5 +100,15 @@ Router
         } catch (error) {
             return next(error);
         }
+    })
+    .get('/menus/:menu_id/menuitems/:menuitem_id/edit', async (req, res, next) => {
+        try {
+            const response = await fetch(`http://localhost:3002/api/menus/${req.params.menu_id}/menuitems/${req.params.menuitem_id}`);
+            const menuitem = await response.json();
+            const menuId = req.params.menu_id;
+            res.render('updatemenuitems', { menuitem, menuId});
+        } catch (error) {
+            return next(error);
+        }
     });
 module.exports = Router;
