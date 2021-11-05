@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 8001;
 const restaurantRoutes = require('./routes/web/restaurants');
-//const menuRoutes = require('./routes/web/menus');
+const menuRoutes = require('./routes/web/menus');
 const handlebars = require('./handlebars');
 
 // set-up view "engine" - res.render
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // use restaurant routes
 app.use('/', restaurantRoutes);
-//app.use('/menus', menuRoutes);
+app.use('/', menuRoutes);
 
 // serve an index page
 app.get('/', (req, res) => {

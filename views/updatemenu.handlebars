@@ -1,11 +1,11 @@
-<h1>Edit Menu</h1>
+<h1>Update Menu</h1>
 
 <form id="updateMenuForm">
-    <input type="hidden" name="menuId" value= "{{menu.0.id}}">
+    <input type="hidden" name="menuId" value= "{{menu.id}}">
     <input type="hidden" name="restId" value= "{{restId}}">
     <div>
         <label for="name">Name</label><br>
-        <input type="text" name="name" id="name" value= "{{menu.0.name}}" required>
+        <input type="text" name="name" id="name" value= "{{menu.name}}" required>
     </div>
     <button type="submit" class= "button--anchor">
       Submit Changes

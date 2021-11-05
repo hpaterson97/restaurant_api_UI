@@ -1,14 +1,14 @@
-<h1>Edit restaurant</h1>
+<h1>Update restaurant</h1>
 
 <form id="updateRestaurantForm">
-    <input type="hidden" name="restaurantId" value= "{{restaurant.0.id}}">
+    <input type="hidden" name="restaurantId" value= "{{restaurant.id}}">
     <div>
         <label for="name">Name</label><br>
-        <input type="text" name="name" id="name" value= "{{restaurant.0.name}}" required>
+        <input type="text" name="name" id="name" value= "{{restaurant.name}}" required>
     </div>
     <div>
         <label for="imagelink">Image Link</label><br>
-        <input type="text" name="imagelink" id="imagelink" value= "{{restaurant.0.imagelink}}" required>
+        <input type="text" name="imagelink" id="imagelink" value= "{{restaurant.imagelink}}" required>
     </div>
     <button type="submit" class= "button--anchor">
       Submit Changes

@@ -18,7 +18,6 @@ async function deleteMenu(btn) {
 
 async function updateRestaurant(event) {
 
-    event.preventDefault();
     const form = event.target;
 
     const data = {
@@ -43,7 +42,6 @@ async function updateRestaurant(event) {
 };
 async function updateMenu(event) {
 
-    event.preventDefault();
     const form = event.target;
 
     const data = {

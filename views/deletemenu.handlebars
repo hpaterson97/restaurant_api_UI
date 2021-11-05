@@ -1,10 +1,10 @@
 do you want to delete menu?
 
 <div class='restaurant'>
-  <h3>{{menu.0.name}}</h3>
-  <img src='{{menu.0.imagelink}}' alt='{{menu.0.name}}' />
+  <h3>{{menu.name}}</h3>
+  <img src='{{menu.imagelink}}' alt='{{menu.name}}' />
   <div class='promo-blocks__actions'>
-    <button type="button" data-id='{{menu.0.id}}' rest='{{restId}}' onClick= 'deleteMenu(this);'>
+    <button type="button" data-id='{{menu.id}}' rest='{{restId}}' onClick= 'deleteMenu(this);'>
       Yes
     </button>   
     <a class='anchor--button' href='/restaurants/{{restId}}/menus' type='button'>
